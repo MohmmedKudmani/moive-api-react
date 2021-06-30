@@ -63,12 +63,14 @@ a:hover {
 @media (max-width: 900px) {
   .navbar {
     flex-direction: column;
-    height: 17vh;
+    height: 19vh;
 
     .search_place {
       justify-content: space-around !important;
       flex-direction: row;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
+      overflow: auto;
+      overflow: hidden;
       a {
         margin-left: 2rem;
       }
@@ -76,7 +78,10 @@ a:hover {
   }
 
   h1 a {
-    margin: 1rem 0;
-    display: block;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
   }
 }

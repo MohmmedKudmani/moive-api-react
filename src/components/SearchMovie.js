@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import style from '../scss/searchMovie.module.scss'
-import { Link } from 'react-router-dom'
 
 function SearchMovie(props) {
   const searchValue = useRef()
