@@ -11,10 +11,8 @@ function OverView(props) {
     return movie.id == params.overviewId
   })
 
-  console.log(movieId)
-
   if (!movieId) {
-    return <p>NoMovieFound</p>
+    return <p className={style.noMvoie}> NoMoviesFound Press Home Pleses</p>
   }
 
   return (
@@ -31,7 +29,9 @@ function OverView(props) {
               <p>{movieId.overview}</p>
             </div>
             <div className={style.moreinfo}>
-              <h1><span>ReleaseDate:</span> {movieId.release_date}</h1>
+              <h1>
+                <span>ReleaseDate:</span> {movieId.release_date}
+              </h1>
               {movieId.adult ? (
                 <p style={{ color: 'red' }}>18+</p>
               ) : (

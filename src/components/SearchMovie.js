@@ -1,8 +1,10 @@
 import { useRef } from 'react'
 import style from '../scss/searchMovie.module.scss'
+import { useHistory } from 'react-router'
 
 function SearchMovie(props) {
   const searchValue = useRef()
+  const history = useHistory()
 
   const getUserValue = (event) => {
     event.preventDefault()
@@ -17,6 +19,7 @@ function SearchMovie(props) {
     searchValue.current.value = ''
 
     props.onUserInput(inputValue)
+    history.replace('/')
   }
 
   return (
